@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="">
+        <div class="nav">
+            <a class="active" href="#home">Home</a>
+            <!-- <a href="details.html">More Information</a> -->
+        </div>
+        <div class="section">
+            <div class="margin-bottom">
+            </div>
+            <div>
+                <h1>From Budget to Box Office: Predicting Film Success Through Data</h1>
+            </div>
+            <div class="">
+                <div>
+                    <h2>Introduction</h2>
+                </div>
+                <div class="">
+                    <p>
+                        The film industry is a complex landscape where box office revenue, production costs, and
+                        audience reception may make or break a film.
+                        Since we are all passionate about film, our enthusiasm sparked our idea for this project. We
+                        often find ourselves discussing our
+                        favorite films and the factors that contribute to a film's impact, and this collective interest
+                        led us to want to explore the relationship between production
+                        budgets, box office revenue, and critical reception. This topic is interesting because movie
+                        success can be defined by many different factors, some of which may not
+                        necessarily occur together. For example, does domestic success guarantee global success? Do
+                        audience ratings predict box office performance?
+                        Because the factors that impact box office success can be so fragile, and often must justify the
+                        investment of production budgets,
+                        we thought this would be an interesting relationship to explore. We became interested in the
+                        relationship between production money invested in the film,
+                        box office, and critical reception (audience ratings).
+                        Our project will seek to understand these relationships through a data-driven approach,
+                        exploring a dataset of film information to identify the differences in financial return and
+                        critical reception of films as a function of their production budget. We can use our findings to
+                        help filmmakers, investors, and analysts determine whether future films will succeed.
+                    </p>
+                </div>
+                <div>
+                    <h2>Visualizations</h2>
+                </div>
+                <div class="">
+                    <h3>Movie Budgets vs. Domestic Worldwide Gross Scatter</h3>
+                    <div class="center-content margin-bottom">
+                        <iframe src="visualizations/budget_vs_gross_scatter.html" width="1050" height="700"></iframe>
+                    </div>
+                </div>
+                <div class="">
+                    <h3>Movie Budgets vs. Domestic Worldwide Gross Regression Line</h3>
+                    <div class="center-content margin-bottom">
+                        <iframe src="visualizations/budget_vs_gross_line.html" width="800" height="600"></iframe>
+                    </div>
+                </div>
+                <div class="">
+                    <h3>Average Domestic and Worldwide Gross by Rating Level</h3>
+                    <div class="center-content margin-bottom">
+                        <img width=700 src="visualizations/bar_rating_vs_gross_fixed.png" alt="Northeastern Logo">
+                    </div>
+                    <p>
+                        This bar chart illustrates the average domestic and worldwide box office revenues for movies grouped by their rounded audience rating (from 1 to 10). For each rating level, we calculated the mean gross revenue among all films that received that score.
+From the chart, we observe that movies with higher audience ratings generally tend to earn more both domestically and worldwide. The average revenue rises significantly for films with ratings between 7 and 9, suggesting that positively rated movies are more likely to succeed commercially. There is also a noticeable gap between domestic and worldwide gross in higher rating levels, indicating a strong global appeal for well-rated films.
+                    </p>
+                </div>
+                <div class="">
+                    <h3>Audience Ratings Across Budget Categories</h3>
+                    <div class="center-content margin-bottom">
+                        <img width=700 src="visualizations/boxplot_budget_vs_rating.png" alt="Northeastern Logo">
+                    </div>
+                    <p>
+                        This box plot visualizes how audience ratings vary across movies with different production budget categories. Each box represents the distribution of ratings for low, mid, and high-budget films. We can see whether higher budgets are associated with better audience reception and also identify notable outliers that defy the general trend.
+                    </p>
+                </div>
+                <div class="">
+                    <h3>Interactive Line Chart: Rating vs. Gross Revenue</h3>
+                    <div class="center-content margin-bottom">
+                        <iframe src="visualizations/interactive_rating_vs_gross_line.html" width="900" height="500"></iframe>
+                    </div>
+                    <p>
+                        This interactive line chart shows how domestic and global average gross revenue changes at different viewing levels (1-10). Users can easily explore trends by hovering over each point to see the exact value. It provides a more dynamic way to examine whether films with higher ratings generate more revenue, and how the two genres' total revenues compare.
+                    </p>
+                </div>
+
+
+
+                <hr>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
