@@ -11,33 +11,33 @@ a {
 }
 
 h1{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Helvetica', sans-serif;
   font-size: 50px;
   font-weight: 700; 
   color: #671515;
 }
 
 h2 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Helvetica', sans-serif;
   color: #831212;
 }
 
 h3 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Helvetica', sans-serif;
   color: #671515;
 }
 
 h4 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Helvetica', sans-serif;
   color: #671515;
 }
 h5 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Helvetica', sans-serif;
 }
 
 .nav a {
   float: left;
-  color: #f2f2f2;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -45,19 +45,19 @@ h5 {
 }
 
 .nav a:hover {
-  background-color: #c9c9c9;
+  background-color: white;
   color: black;
 }
 
 body {
-  background-color: #fbfbfb;
+  background-color: white;
   font-family: 'Helvetica';
   margin: 0;
 }
 
 .section {
-  margin-left: 12vw;
-  margin-right: 12vw;
+  margin-left: 15vw;
+  margin-right: 15vw;
   margin-top: 5vw;
 }
 
