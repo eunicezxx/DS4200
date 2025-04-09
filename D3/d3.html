@@ -18,13 +18,13 @@
   </style>
 </head>
 <body>
-  <h2>Production Budget vs. Gross Revenue (Millions USD)</h2>
-  <svg width="800" height="500"></svg>
+  <h2>Production Budget vs. Gross Revenue</h2>
+  <svg width="900" height="500"></svg>
   <div class="tooltip" style="opacity:0;"></div>
 
   <script>
     const svg = d3.select("svg"),
-          margin = {top: 40, right: 120, bottom: 50, left: 80},
+          margin = {top: 40, right: 140, bottom: 50, left: 80},
           width = +svg.attr("width") - margin.left - margin.right,
           height = +svg.attr("height") - margin.top - margin.bottom,
           g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
@@ -68,7 +68,7 @@
       g.append("path")
         .datum(data)
         .attr("class", "line")
-        .attr("stroke", "orange")
+        .attr("stroke", "red")
         .attr("d", lineWorldwide);
 
       g.selectAll(".dot-domestic")
@@ -92,7 +92,7 @@
         .attr("cx", d => x(d.budget))
         .attr("cy", d => y(d.worldwide))
         .attr("r", 3)
-        .attr("fill", "orange")
+        .attr("fill", "red")
         .on("mouseover", (event, d) => {
           tooltip.transition().duration(200).style("opacity", .9);
           tooltip.html(`Budget: $${d.budget}M<br>Worldwide: $${d.worldwide}M`)
@@ -104,7 +104,7 @@
       g.append("rect").attr("x", width + 20).attr("y", 0).attr("width", 10).attr("height", 10).attr("fill", "steelblue");
       g.append("text").attr("x", width + 35).attr("y", 10).attr("class", "legend").text("Domestic Gross");
 
-      g.append("rect").attr("x", width + 20).attr("y", 20).attr("width", 10).attr("height", 10).attr("fill", "orange");
+      g.append("rect").attr("x", width + 20).attr("y", 20).attr("width", 10).attr("height", 10).attr("fill", "red");
       g.append("text").attr("x", width + 35).attr("y", 30).attr("class", "legend").text("Worldwide Gross");
     });
   </script>
