@@ -1,47 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+:root {
+  --main-red: #550315;
+}
 
 
 .nav {
-  background-color: #561a1a;
+  background-color: var(--main-red);
   overflow: hidden;
+  border-bottom: white 3px solid;
 }
 
 a {
   color: #980505;
 }
 
+.img-round {
+  border-radius: 0px;
+  margin: 20px;
+}
+
 h1{
-  font-family: 'Helvetica', sans-serif;
-  font-size: 50px;
-  font-weight: 700; 
-  color: #671515;
+  font-family: 'Georgia';
+  font-size: 45px;
+  font-weight: 800; 
+  color: var( --main-red);
 }
 
 h2 {
-  font-family: 'Helvetica', sans-serif;
-  color: #831212;
+  font-family: 'Georgia', sans-serif;
+  color: var( --main-red);
 }
 
 h3 {
-  font-family: 'Helvetica', sans-serif;
-  color: #671515;
+  font-family: 'Georgia', sans-serif;
+  color: var( --main-red);
 }
 
 h4 {
-  font-family: 'Helvetica', sans-serif;
-  color: #671515;
+  font-family: 'Georgia', sans-serif;
+  color: var( --main-red);
 }
 h5 {
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Georgia', sans-serif;
+}
+
+p {
+  font-family: 'Helvetica'
 }
 
 .nav a {
   float: left;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 30px 20px;
   text-decoration: none;
   font-size: 17px;
+  font-family: 'Georgia';
 }
 
 .nav a:hover {
@@ -59,6 +73,12 @@ body {
   margin-left: 12vw;
   margin-right: 12vw;
   margin-top: 5vw;
+}
+
+.text-section {
+  margin-left: 7vw;
+  margin-right: 7vw;
+  margin-top: 0vw;
 }
 
 .margin-bottom {
