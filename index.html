@@ -26,28 +26,24 @@
                     </div>
                     <div>
                         <p>
-                            The film industry is incredibly complex: box office revenue, production costs, or
-                            audience reception may make or break a film.
+                            The film industry is incredibly complex: production costs, runtime, genre, 
+                            audience reception, and other factors may make or break a film.
                             Since we are all passionate about films, we wanted to investigate a movie-related dataset.
                             Our collective interest
-                            led us to want to explore the relationship between production
-                            budgets, box office revenue, and audience reception. This topic is interesting because movie
-                            success can be defined by many different factors, some of which may not
-                            necessarily occur together. Additionally, movies are often huge investments, so movie
-                            success is incredibly important.
+                            led us to want to explore the relationship between these factors and revenue. This topic is interesting because movie
+                            success can be influenced by many different factors, some of which may not
+                            necessarily occur together. Additionally, movies are often huge investments, so the financial success of movies
+                            is incredibly important, especially for smaller film studios.
                             We can ask many interesting questions, such as: does domestic success guarantee global
-                            success? Do
-                            audience ratings predict box office performance?
+                            success? Do audience ratings predict box office performance?
                             Because the factors that impact box office success can be so fragile, and often must justify
-                            the
-                            investment of production budgets,
-                            we thought this would be an interesting relationship to explore. We became interested in the
-                            relationship between production money invested in the film,
-                            box office, and critical reception (audience ratings).
-                            Our project task is to understand these relationships through a data-driven
+                            the investment of production budgets,
+                            we thought this would be an interesting relationship to explore. 
+                            Our project task is to understand these relationships between these factors through a data-driven
                             approach,
                             exploring a dataset of film information to identify the differences in financial return and
-                            critical reception of films as a function of their production budget. We can use our
+                            critical reception of films as a function of their production budget, as well as factors like 
+                            runtime and genre. We can use our
                             findings to
                             help filmmakers, investors, and analysts determine whether future films will succeed.
                         </p>
@@ -62,7 +58,7 @@
                             The dataset provides comprehensive statistics related to the film, with each row representing a movie. First, it includes general information about each movie: the movie titles, production dates, genres, runtime minutes, and director information. Then, it includes information about the audience reception of the movie, such as the average ratings, number of votes, and approval index. Finally, it provides data related to the financial investment and success of the movie: production budgets, domestic gross earnings, and worldwide gross earnings. 
                         </p>
                         <p>
-                            Specifically, we will be focused on a few features: the movie titles, average ratings, production budgets, domestic gross earnings, and worldwide gross earnings. The movie titles are quite self-explanatory: unique strings that are the title for each movie. The average ratings are the average rating given by online users for a particular movie. This context is important because it means that the ratings may exclude populations that do not post reviews online, such as older or very young age groups. The production budgets are the amount of money used in USD to produce the movie. The domestic gross earnings are the revenue in USD earned from tickets sold in the movie’s home/domestic market. The worldwide gross earnings are the revenue earned from global ticket sales in USD. These characteristics will allow us to analyze the financial and audience popularity of films in different budget categories, making it suitable for our analysis.
+                            Specifically, we will be focused on a few features: the movie titles, average ratings, production budgets, genre, runtime, domestic gross earnings, and worldwide gross earnings. The movie titles are quite self-explanatory: unique strings that are the title for each movie. The average ratings are the average rating given by online users for a particular movie. This context is important because it means that the ratings may exclude populations that do not post reviews online, such as older or very young age groups. The genres column is a list of genres for a movie (such as Animation, Action, Adventure) that we will need to process in order to create visualizations. The runtime is the length of the movie in minutes. The production budgets are the amount of money used in USD to produce the movie. The domestic gross earnings are the revenue in USD earned from tickets sold in the movie’s home/domestic market. The worldwide gross earnings are the revenue earned from global ticket sales in USD. These characteristics will allow us to analyze the financial and audience popularity of films in different budget categories, making it suitable for our analysis.
                         </p>
                         <p>
                             Given the structure of the data set, we will pre-process the data to ensure consistency and
@@ -140,8 +136,8 @@
                             amounts.
                         </p>
                         <p class="text-section">
-                            Overall, there is a positive correlation between gross and budget. However, we can also see that there is a lot of variation in the points given the same budget, so budget is not the only factor that is important for movie success. Worldwide gross also tends to be greater than domestic gross, which is expected. In particular, outliers like Avengers: Endgame and Avatar: The Way of Water have extremely high worldwide gross amounts, showing the potential of targeting worldwide/international audiences. The highest grossing films, as expected, have the highest budgets, but most films tend to cost below 300 million dollars and make below 1.5 billion dollars in revenue, with only a few outliers surpassing these numbers.
-We can see that both lines (with domestic in red and worldwide in blue) have a positive slope, indicating a positive correlation, where higher budgets tend to be associated with higher gross amounts for both worldwide and domestic gross. Interestingly, the blue line, representing worldwide gross, has a steeper slope than the red line, representing domestic gross. Therefore, the main takeaway is that movie producers may want to target international audiences, as a higher budget tends to mean more gains worldwide than domestically.
+                            Overall, there appears to be a positive, linear trend between gross and budget, with gross tending to increase as budget increases. However, we can also see that there is a lot of variation in the points given the same budget, so budget is not the only factor that is important for movie success. Worldwide gross also tends to be greater than domestic gross, which is expected. In particular, outliers like Avengers: Endgame and Avatar: The Way of Water have extremely high worldwide gross amounts, showing the potential of targeting worldwide/international audiences. The highest grossing films, as expected, have the highest budgets, but most films tend to cost below 300 million dollars and make below 1.5 billion dollars in revenue, with only a few outliers surpassing these numbers.
+We can see that both lines (with domestic in red and worldwide in blue) have a positive slope, indicating a positive relationship, where higher budgets tend to be associated with higher gross amounts for both worldwide and domestic gross. Interestingly, the blue line, representing worldwide gross, has a steeper slope than the red line, representing domestic gross. Therefore, the main takeaways are that higher movie budgets are associated with higher movie revenue, and movie producers may want to target international audiences, as a higher budget tends to mean more gains worldwide than domestically.
 
                         </p>
                     </div>
@@ -166,7 +162,7 @@ We can see that both lines (with domestic in red and worldwide in blue) have a p
                     </p>
                     <h5  class="text-section">Takeaway</h5>
                     <p class="text-section">
-                        This interactive line chart illustrates the relationship between production budgets and gross
+                        This interactive line chart illustrates the relationship between production budgets and 
                         domestic and global film revenues. Each dot represents a film, with the blue line representing
                         the worldwide gross and the red line representing the domestic gross.
                         The task for this chart is to further explore the relationship between budget and revenue. By
@@ -180,9 +176,10 @@ We can see that both lines (with domestic in red and worldwide in blue) have a p
                         and worldwide gross.
                         While this is expected, the graph emphasizes how large this difference can be.
                         Especially, for movies that have a very high budget, there is a larger difference in these two
-                        values.
+                        values, potentially due to advertising or larger production budgets being associated with larger, widely-known film studios.
                         Additionally, the lines in the graph show how much the revenue can vary. The many peaks in the
-                        graph again emphasize that budget does not play the only role in revenue.
+                        graph again emphasize that budget does not play the only role in revenue, and as budget increases,
+                        the gap between global and doemstic gross grows.
                     </p>
                 </div>
                 <div class="">
@@ -249,13 +246,15 @@ We can see that both lines (with domestic in red and worldwide in blue) have a p
                         identify outliers that do not follow the general trend.
                     </p>
                     <p class="text-section">
-                        The main task is to compare the audience distributions across different budgets. The main
-                        takeaway
-                        is that ratings look very similar across all budgets, which is very interesting. The IQR
-                        for each of the categories appears very similar. Therefore, spending more money does not
-                        always mean a better quality film. Furthermore, this may possibly suggest that
-                        a higher budget does not account for higher revenue because of ratings, as ratings
-                        appear very similar across different categories of budgets.
+                        The main task is to compare the audience rating distributions across different budgets. 
+                        
+                        We can see that the distribution of ratings are very similar across all budgets, and the IQR
+                        for each of the categories appears similar. Therefore, one main takeaway is that
+                        spending more money does not
+                        guarantee a better quality film. Film studios cannot simply 
+                        invest huge amounts of money and expect perfect movies. Another takeaway is that
+                        a higher budget does not account for higher revenue because of ratings. There 
+                        may be a different reason why a higher budget is associated with higher revenue. 
                     </p>
 
                 </div>
@@ -362,7 +361,7 @@ We can see that both lines (with domestic in red and worldwide in blue) have a p
                             Our data visualizations’ main task was to explore the relationship between the production
                             budget, audience ratings, and box office performances of movies, with a focus on what
                             produced the highest domestic and worldwide gross amounts. We used line charts, scatter
-                            plots, a bar chart, box plots, and a histogram/bubble chart to explore the film dataset and to
+                            plots, bar charts, box plots, and a histogram/bubble chart to explore the film dataset and to
                             understand how these factors affect each other in complicated ways.
 
 
@@ -371,10 +370,9 @@ We can see that both lines (with domestic in red and worldwide in blue) have a p
                             The line chart comparing budgets and gross revenues showed that films with higher budgets do
                         tend to have higher gross amounts, with the worldwide gross being much higher than the domestic
                         gross. This might suggest that appealing to global, rather than domestic, audiences is
-                        financially beneficial. However, we also saw in later graphs that there is a lot of variability,
-                        and budget is not the only factor. Films with the same budget experience a lot of variability in
-                        terms of their gross. Films with moderate budgets have dense representation, which may suggest
-                        that this is a good balance between market appeal and managing investments/risk.
+                        financially beneficial. However, we also saw in later graphs that there is a lot of variability
+                        in revenue, even for the same budgets, so budget is not the only factor. Films with the same budget experience a lot of variability in
+                        terms of their gross. 
                         </p>
                         
 
@@ -383,7 +381,7 @@ We can see that both lines (with domestic in red and worldwide in blue) have a p
                             Later graphs introduced audience rating as an interesting factor. They demonstrated that a
                             higher audience rating does suggest higher revenue. The bubble chart showed that the films
                             that earn the most money overall have both a high budget and very high ratings. We also saw
-                            that the movie quality actually remains quite similar across rating categories, suggesting
+                            that the movie quality actually remains quite similar across budget categories, suggesting
                             budget may affect revenue in a different way other than quality.
 
 
@@ -423,7 +421,7 @@ We can see that both lines (with domestic in red and worldwide in blue) have a p
                             which we found to be consistently higher than domestic revenue. 
                             However, there is a lot of volatility, where films across all kinds of budgets 
                             still differ a lot in revenue, particularly for high budget films. Some break
-                            box office records, while others severely underperform, despite high investmnet. 
+                            box office records, while others severely underperform, despite high investment. 
                             We saw that films with moderate budgets are most common, 
                             so this range might be a good balance between investment and market appeal. 
 
@@ -445,7 +443,7 @@ We can see that both lines (with domestic in red and worldwide in blue) have a p
 
 
 
-                            Overall, these visualizations together demonstrate how maximizing movie revenue is extremely complex and challenging. While we saw that higher budgets tend to mean higher worldwide and domestic grosses, there is still a lot of variability in revenue across all budgets. Furthermore, we found that across all budgets, audience ratings tend to remain similar. Therefore, higher budgets do not guarantee good movies, despite better ratings also being associated with higher revenue. We found that the genres Animation, Adventure, and Sci-Fi are most financially successful, appealing to broad audiences. Thus, the best films, which achieve the most impactful financial success, require large production budgets, excellent audience ratings, and broad audience appeal. While these factors seem intuitive, it is also important that we looked to the data to confirm or reject our hypotheses rather than assuming they are true. After establishing these baseline factors, we can further delve into the data: do certain audiences spend more on movies? How have these trends changed over time? Do critic scores matter more than audience scores? Why are some films such significant outliers in revenue? There are many interesting and complex factors we can now further explore. 
+                            Overall, these visualizations together demonstrate how maximizing movie revenue is extremely complex and challenging. While we saw that higher budgets tend to mean higher worldwide and domestic grosses, there is still a lot of variability in revenue across all budgets. Furthermore, we found that across all budgets, audience ratings tend to remain similar. Therefore, higher budgets do not guarantee good movies, despite better ratings also being associated with higher revenue. We found that the genres Animation, Adventure, and Sci-Fi are most financially successful, appealing to broad audiences. Thus, the best films, which achieve the most impactful financial success, require large production budgets, excellent audience ratings, and broad audience appeal. While these factors seem intuitive, it is also important that we looked to the data to confirm or reject our hypotheses rather than assuming they are true. After establishing these baseline factors, we can further delve into the data: do certain audiences spend more on movies? How have these trends changed over time? Do critic scores matter more than audience scores? Why are some films such significant outliers in revenue? Our findings open the door to many new, interesting questions we can now further explore. 
 
                         </p>
                     </div>
