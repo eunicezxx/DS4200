@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.8.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-b14636af82d7916e5405768f3415da68"}, "mark": {"type": "bar"}, "encoding": {"tooltip": [{"field": "genre", "title": "Genre", "type": "nominal"}, {"field": "Worldwide gross $", "title": "Avg. Worldwide Gross", "type": "quantitative"}], "x": {"field": "genre", "sort": ["Animation", "Adventure", "Sci-Fi", "Action", "Fantasy", "Family", "Thriller", "Comedy", "Mystery", "Musical", "Crime", "Drama", "Horror", "Romance", "Biography", "War", "History", "\\N", "Western", "Music", "News", "Sport", "Documentary", "Film-Noir"], "title": "Genre", "type": "nominal"}, "y": {"field": "Worldwide gross $", "title": "Average Worldwide Gross ($)", "type": "quantitative"}}, "height": 500, "params": [{"name": "param_13", "select": {"type": "interval", "encodings": ["x", "y"]}, "bind": "scales"}], "title": "Average Worldwide Gross by Genre", "width": "container", "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-b14636af82d7916e5405768f3415da68": [{"genre": "Action", "Worldwide gross $": 190479713.19570604}, {"genre": "Adventure", "Worldwide gross $": 253685123.2644628}, {"genre": "Animation", "Worldwide gross $": 304682054.92116183}, {"genre": "Biography", "Worldwide gross $": 62946550.76331361}, {"genre": "Comedy", "Worldwide gross $": 103529067.62862319}, {"genre": "Crime", "Worldwide gross $": 77010278.25384615}, {"genre": "Documentary", "Worldwide gross $": 28057340.313432835}, {"genre": "Drama", "Worldwide gross $": 73442723.65972851}, {"genre": "Family", "Worldwide gross $": 146681909.79245284}, {"genre": "Fantasy", "Worldwide gross $": 179518681.95142856}, {"genre": "Film-Noir", "Worldwide gross $": 8573840.57142857}, {"genre": "History", "Worldwide gross $": 60368835.98657718}, {"genre": "Horror", "Worldwide gross $": 70464327.89473684}, {"genre": "Music", "Worldwide gross $": 55243682.12413793}, {"genre": "Musical", "Worldwide gross $": 82771914.375}, {"genre": "Mystery", "Worldwide gross $": 85673635.2200489}, {"genre": "News", "Worldwide gross $": 53365925.0}, {"genre": "Romance", "Worldwide gross $": 68614444.6339779}, {"genre": "Sci-Fi", "Worldwide gross $": 224291581.33245382}, {"genre": "Sport", "Worldwide gross $": 50821836.10526316}, {"genre": "Thriller", "Worldwide gross $": 107347939.07185629}, {"genre": "War", "Worldwide gross $": 61963433.62790698}, {"genre": "Western", "Worldwide gross $": 56302145.88636363}, {"genre": "\\N", "Worldwide gross $": 58152074.0}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
